@@ -1,0 +1,14 @@
+---
+- name: Install PHP
+  yum:
+   name:
+   - php
+   - php-cli
+   - php-common
+   - php-fpm
+   state: present
+- name: Enable on boot.
+  service: 
+   name: php-fpm
+   enabled: yes
+   state: started

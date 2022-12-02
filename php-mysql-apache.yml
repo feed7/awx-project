@@ -1,0 +1,13 @@
+---
+  - name: Install Apache, MariaDB and PHP.
+    hosts: all
+    become: true
+
+    tasks:
+    - import_tasks: "tasks/apache.yml"
+      tags: apache
+    - import_tasks: "tasks/mysql.yml"
+      tags: mysql
+    - import_tasks: "tasks/php.yml"
+      tags: php
+
