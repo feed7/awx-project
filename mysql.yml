@@ -1,9 +1,0 @@
----
-- name: Install mariadb.
-  yum:
-   name:
-   - mariadb
-   - mariadb-server
-   state: present
-- name: Enable on boot.
-  service: name=mariadb enabled=yes
